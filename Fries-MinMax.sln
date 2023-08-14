@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fries-MinMax", "Fries-MinMax.csproj", "{12483B81-47B3-46CF-B319-1A2E60D16589}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{12483B81-47B3-46CF-B319-1A2E60D16589}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12483B81-47B3-46CF-B319-1A2E60D16589}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12483B81-47B3-46CF-B319-1A2E60D16589}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12483B81-47B3-46CF-B319-1A2E60D16589}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {44990BF2-10FE-4569-9D7E-589D18961E14}
+	EndGlobalSection
+EndGlobal

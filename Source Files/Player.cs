@@ -1,12 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Fries_MinMax.Source_Files
 {
-    public static class CONST
-    {
-        public const uint MAX = 5;
-    }
-
     public interface IVal
     {
         uint val { get; set; }
@@ -66,7 +62,7 @@ namespace Fries_MinMax.Source_Files
 
         public bool isValidSplit(Hand _h)
         {
-            return (_h != this) && ((_h.r + _h.l).val == (l + r).val || ((_h.r + _h.l).val == 0 && (l + r).val % CONST.MAX == 0));
+            return (_h != this) && (_h.r.val + _h.l.val == l.val + r.val || (_h.r.val + _h.l.val == 0 && l.val + r.val == CONST.MAX)) && l.val + r.val != 0;
         }
         public bool isValidSplit(uint l, uint r)
         {
@@ -132,12 +128,29 @@ namespace Fries_MinMax.Source_Files
                     else { o += new RightVal(a); }
                 }
             }
+            else { throw new InvalidOperationException(); }
+        }
+        public void commands(List<Command> cmds, ref Hand o)
+        {
+            foreach (Command cmd in cmds)
+            {
+                command(cmd, ref o);
+            }
+        }
+        public static void commands(List<Command> cmds, ref Turn p)
+        {
+            foreach (Command cmd in cmds)
+            {
+                p.p1.command(cmd, ref p.p2);
+                p.next();
+            }
         }
 
         public double score()
         {
-            if (this == new Hand(0, 0)) { return 2; }
-            //if (this == new Hand( 1, 0)){ return -0.5; }
+            if (this == new Hand(0, 0)) { return 1; }
+            if (this == new Hand( 1, 0)){ return -0.5; }
+            if ((l + r).val == 0) { return 0.5; }
             return 0;
         }
 

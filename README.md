@@ -16,11 +16,11 @@ Each command follows a 3 part structure, (or ([as])(?:([lr])([lr])|([0-9]+)\-([0
 
 Example:
 
-<1, 1>
-<1, 1>
-Player> all
-<2, 1>
-<1, 1>
-AI> s3-0
-<3, 0>
-<1, 1>
+<1, 1> <br>
+<1, 1> <br>
+Player> all <br>
+<2, 1> <br>
+<1, 1> <br> 
+AI> s3-0 <br>
+<3, 0> <br>
+<1, 1> <br>
